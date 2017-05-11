@@ -1,25 +1,28 @@
-  <?php include ("config.php");?>
-  <!DOCTYPE html>
+<!DOCTYPE html>
 <html>
 <head>
-<title>170 CMS Wordpress</title>
+<title><?php bloginfo('description'); ?> | <?php bloginfo('name'); ?></title>
     
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width" />
-<link rel="stylesheet" type="text/css" href="style.css" />
-<link rel="stylesheet" type="text/css" href="flexslider.css" />
+<link rel="stylesheet" type="text/css" href="<?php bloginfo('stylesheet_url'); ?>" />
+<link rel="stylesheet" type="text/css" href="<?php bloginfo('template_directory'); ?>/flexslider.css" />
 
 <!-- Slim Menu -->
-<link rel="stylesheet" href="slimmenu.min.css" type="text/css">
+<link rel="stylesheet" href="<?php bloginfo('template_directory'); ?>/slimmenu.min.css" type="text/css">
 <!-- Slim Menu -->
     
 <!-- jQuery Link -->    
 <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
 <!-- jQuery Link --> 
+
+<!-- Begin WP Head Function -->
+<?php wp_head(); ?>
+<!-- Begin WP Head Function -->
     
 </head>
 
-<body>
+<body <?php body_class(); ?>>
     <!-- FB Like Button Java Start -->
     <div id="fb-root"></div>
 <script>(function(d, s, id) {
@@ -32,7 +35,7 @@
     <!-- FB Like Button Jave End -->
     
 <header> 
-<a href="woodskys.php"><img src="images/woodskys_logo.png" class="icon" alt="Home" /></a>
+<a href="woodskys.php"><img src="<?php bloginfo('template_directory'); ?>/images/woodskys_logo.png" class="icon" alt="Home" /></a>
     
   <h2 class="pageid"><?=$myPageID;?></h2>
     
@@ -80,19 +83,15 @@
 <!-- START Article (Chapter) -->
 
 <article>
-  <h2>About</h2>
-    
-      <p>Welcome to Seattle's one and only Ski and Snowboard Bar!</p>
-    
-      <p>Woodsky's is the perfect place to go whether your coming off the hill from an epic powder day, you just got done skating around the city, or you just want to get all your friends together to do some Goldfish Racing.</p>
-    
-      <p>Come over to 303 N 36th St. in Fremont</p>
-    
-      <p>If you have any questions or you want to book an event give us a call at (206)547-9662</p>
-      
+    <?php if (have_posts()) : while (have_posts()) : the_post(); //initiates the loop ?>
+    <h2><a href="<?php the_permalink(); //links to the page or posting ?>">
+    <?php the_title(); //gets the page or posting title ?></a></h2>
+    <?php the_content(''); //gets the page or posting content ?>
+    <?php endwhile; endif; //ends the loop ?>
+  <small>index.php</small>
 </article>
     
-<!-- END Article (Chapter) -->
+<!-- START Article (Chapter) -->
  
     
 <!-- START Aside -->
@@ -139,5 +138,9 @@ $('#navigation').slimmenu(
 
 <script type="text/javascript" src="js/jquery.easing.js"></script> 
 
+<!-- Begin WP Footer Function -->
+<?php wp_footer(); ?>
+<!-- Begin WP Footer Function -->
+    
 </body>
 </html>

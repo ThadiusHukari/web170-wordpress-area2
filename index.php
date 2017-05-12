@@ -49,9 +49,9 @@
     <h1>303 N 36th St. Seattle, WA 98103</h1>
     </div>
     
-  <!-- START NAVIGATION (Main) -->
+  <!-- START NAVIGATION (Main)
   <nav>
-    <ul id="navigation" class="slimmenu">
+    <ul class="slimmenu">
 <li><a href="woodskys.php">Home</a></li>
 <li><a href="about.php">About</a>
     <ul>
@@ -71,7 +71,13 @@
 <li><a href="contact.php">Contact</a></li>
     </ul>
   </nav>
-  <!-- END NAVIGATION (Main) -->
+   END NAVIGATION (Main) -->
+    
+<!-- Begin WP Menu -->
+<?php wp_nav_menu( array( 'theme_location' => 'main-menu', 'container' => 'nav', 'items_wrap' => '<ul id="navigation" class="slimmenu %2$s">%3$s</ul>', ) ); ?>
+<!-- End WP Menu -->
+
+    
   </header>
 <!-- ABOVE THIS LINE IS TOP PHP -->
 
@@ -89,6 +95,8 @@
     <?php the_content(''); //gets the page or posting content ?>
     <?php endwhile; endif; //ends the loop ?>
   <small>index.php</small>
+    
+    <?php if(is_404()) { echo '404 Error. What are you lookin for dood?'; } ?>
 </article>
     
 <!-- START Article (Chapter) -->

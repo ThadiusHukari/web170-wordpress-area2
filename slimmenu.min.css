@@ -152,3 +152,8 @@ ul.slimmenu>li{
 ul.slimmenu>li:first-child,ul.slimmenu>li.has-submenu+li{
     border-left:0;
 }
+
+/* ADDED SUB-MENU CLASS */
+#slimmenu ul li ul.sub-menu {
+    display: none;
+}

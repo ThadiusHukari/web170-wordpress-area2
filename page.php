@@ -8,8 +8,8 @@
     <?php the_content(''); //gets the page or posting content ?>
     <?php endwhile; endif; //ends the loop ?>
     
-  <small>index.php</small>
-
+  <small>page.php</small>
+    
 </article>    
 <!-- END Article (Content) -->
 

@@ -7,7 +7,7 @@
     <?php the_title(); //gets the page or posting title ?></a></h2>
 
         <small>Posted on <?php the_time('F jS, Y'); ?> by <?php the_author(); ?> in <?php the_category(', '); ?>.</small>
-
+    <?php the_post_thumbnail('large');//get the associated image ?>
     <?php the_content(''); //gets the page or posting content ?>
     <?php endwhile; endif; //ends the loop ?>
     

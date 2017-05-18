@@ -10,11 +10,13 @@ Version: 4.89
 */
 
 
-// Register Menu Locations 
+// Start of Register Menu Locations 
 // use slug and tell the Menu where to go
 register_nav_menus(array(
     'main-menu' => __('Main Menu'),));
-    
 // End of Register Menu Location
+
+// Add theme support for Post Thumbnails & Featured Images
+add_theme_support('post-thumbnails');
     
 ?>

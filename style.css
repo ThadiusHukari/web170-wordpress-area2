@@ -85,6 +85,34 @@ Version: 4.89
 		height:150px;
 		margin-right:1em;	
         }
+    
+    #article small {
+        display: block;
+        margin-bottom: 10px;
+    }
+
+/* START CONTENT IMAGES */
+    #article img.size-thumbnail {
+        float: left;
+        margin-right: 20px;
+    }
+    
+    #article img {
+        border: 1px solid #000;
+        padding: 4px;
+        background: #fff;
+    }
+
+    #article img.featured {
+        margin-bottom: 10px;
+    }
+
+    #article article.post-excerpt {
+        overflow: hidden;
+        margin-bottom: 20px;
+    }
+/* END CONTENT IMAGES */
+    
 	
 	article {
 		text-align:justify;
@@ -183,7 +211,7 @@ Version: 4.89
     /* RESPONSIVE BREAK POINTS AND STYLES */
 	
 	/* DESKTOP Layout and Sizing */
-	@media all and (min-width:980px) and (max-width:1280px) {
+	@media all and (min-width:980px) and (max-width:1100px) {
 		body {
 			background:#373A45;
 			width:90%;

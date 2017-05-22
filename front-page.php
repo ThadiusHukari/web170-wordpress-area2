@@ -2,7 +2,7 @@
 
 <!-- START Article (Chapter) -->
 
-<article>
+
   <h2>Seattle's Premier Ski & Snowboard Bar</h2>
 <div class="flexslider">
 	<ul class="slides">

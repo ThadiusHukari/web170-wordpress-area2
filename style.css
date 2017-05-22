@@ -37,7 +37,8 @@ Version: 4.89
 	
 	/* body is being used as the wrapper of all content for this layout */
 	body {
-		background:#373A45;
+        max-width: 960px;
+		background:#83A4FF;
 		font-family:baskerville, palatino, 'palatino linotype', georgia, serif;
         color: #fff;
         width:90%;
@@ -45,7 +46,7 @@ Version: 4.89
 	}
 	
 	header {
-		background:#373A45;
+		background:#83A4FF;
 		color:#fff;
 	}
 
@@ -57,7 +58,7 @@ Version: 4.89
 	h1,h2,h3 {
         font-family: 'fontdinerdotcom_huggableRg'
 		font-weight:normal;
-        background: #373A45;
+        background: #83A4FF;
 	}
 	
 	h1 {
@@ -86,38 +87,43 @@ Version: 4.89
 		margin-right:1em;	
         }
     
-    #article small {
+    article small {
         display: block;
         margin-bottom: 10px;
     }
 
 /* START CONTENT IMAGES */
-    #article img.size-thumbnail {
+    article img.size-thumbnail {
         float: left;
-        margin-right: 20px;
+        margin-right: 5px 20px;
     }
     
-    #article img {
+    article img {
         border: 1px solid #000;
         padding: 4px;
         background: #fff;
+        margin-right: 10px;
     }
 
-    #article img.featured {
+    article img.featured {
         margin-bottom: 10px;
     }
 
-    #article article.post-excerpt {
+    article article.post-excerpt {
         overflow: hidden;
         margin-bottom: 20px;
     }
+
+    article img.size-large {
+        margin: 5px 10px 5px 10px;
+        float:left;
+        width:100%;
+        height: auto;
+        
+    }
 /* END CONTENT IMAGES */
-    
-	
-	article {
-		text-align:justify;
-	}
-	
+
+
     section.sponsors img{
         clear: both;
         width: 60%;
@@ -138,7 +144,7 @@ Version: 4.89
 		overflow: hidden;
 		max-width: 100%;
 		height: auto;
-        background: #373A45;
+        background: #83A4FF;
 		} 
 	
 	div.embed-container iframe { 	
@@ -211,9 +217,9 @@ Version: 4.89
     /* RESPONSIVE BREAK POINTS AND STYLES */
 	
 	/* DESKTOP Layout and Sizing */
-	@media all and (min-width:980px) and (max-width:1100px) {
+	@media all and (min-width:972px) {
 		body {
-			background:#373A45;
+			background:#83A4FF;
 			width:90%;
 			margin:0 auto;
 		}
@@ -237,10 +243,11 @@ Version: 4.89
             margin-bottom:1em;
 		}
 		
+        
 		article {
 				float:left;
-				width:64%;
-				padding-left:2.5%;
+				width:66%;
+				padding-left:1.5%;
 		}
 		
 		article h2 {
@@ -250,7 +257,10 @@ Version: 4.89
 		
 		article p {
 			font-size:1.2em;
+            margin: 5px;
+            width: 147%;
 		}
+        
 		
 		section {
 				-webkit-column-count:2;
@@ -305,8 +315,26 @@ Version: 4.89
             padding: 0 1em 1.5em 0;
         }
         
+        article {
+            float:left;
+            width:64%;
+            padding-left:2.5%;
+		}
+        
+        aside {
+            float:right;
+            width:26%;
+            padding: 0px 2.5% 0px 2.5%;
+            font-size:90%;
+		}
+		
+		aside h2 {
+            font-size:1.2em;
+            margin-bottom:1em;
+		}
+        
         h1,h2,h3 {
-        font-family: 'fontdinerdotcom_huggableRg'
+            font-family: 'fontdinerdotcom_huggableRg'
 		
         }
 	}

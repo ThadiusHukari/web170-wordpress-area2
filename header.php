@@ -12,9 +12,9 @@
 <link rel="stylesheet" href="<?php bloginfo('template_directory'); ?>/slimmenu.min.css" type="text/css">
 <!-- Slim Menu -->
     
-<!-- jQuery Link -->    
+<!-- jQuery Link -->
 <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
-    <script type="text/javascript" src="js/jquery.flexslider.js"></script>
+    <script type="text/javascript" src="<?php bloginfo('template_directory'); ?>/js/jquery.flexslider.js"></script>
 <!-- jQuery Link --> 
 
 <!-- Begin WP Head Function -->

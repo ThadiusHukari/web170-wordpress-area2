@@ -3,7 +3,11 @@
 
 <!-- START Sec NAV Sidebar -->
     <div id="sidebar">
-        <h2><?php
+        
+<!-- START Sub Nav -->
+<div id="sub-navigation" class="widget">
+
+    <h2><?php
             
         if(is_page()) { //if were on a page...
 
@@ -14,8 +18,8 @@
         }
             
         ?>
-        </h2>
-        <ul>
+    </h2>
+    <ul>
         <?php
 
         if(is_page() || is_404()) { //if were on a page...
@@ -34,8 +38,24 @@
             
             }
             ?>
-        </ul>
-                
+    </ul>
+</div>
+<!-- END Sub Nav -->
+        
+        
+<?php if(get_post_meta($post->ID, 'quote', true)) : ?>
+<!-- START Pull Quote -->
+<div id="pull-quote" class="widget">
+    <blockquote><?php echo get_post_meta($post->ID, 'quote', true) ?></blockquote>
+</div>
+<!-- END Pull Quote -->
+<?php endif; ?>
+        
+<!-- START Widgets -->
+<?php dynamic_sidebar(1); ?>
+<!-- END Widgets -->
+             
+        
     </div>
 
 <!-- END Sec NAV Sidebar -->
@@ -46,9 +66,6 @@
     </div>
 <!-- End Calendar -->
 
-    <h3>Recent Posts</h3>
-    <!-- SnapWidget Instagram Feed -->
-<script src="https://snapwidget.com/js/snapwidget.js"></script>
-<iframe src="https://snapwidget.com/embed/181116" class="snapwidget-widget" allowTransparency="true" frameborder="0" scrolling="no" style="border:none; overflow:hidden; width:100%; "></iframe>
+  
     
 <!-- END Aside -->

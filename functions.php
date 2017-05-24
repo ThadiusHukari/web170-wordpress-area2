@@ -9,6 +9,8 @@ Description: This is the theme for SP17 WEB170 CMS WordPress Demo
 Version: 4.89
 */
 
+//register side bars
+register_sidebar(array('before_widget' => '<div id="%1$s" class="widget %2$s">', 'after_widget' => '</div>'));
 
 // Start of Register Menu Locations 
 // use slug and tell the Menu where to go
@@ -18,5 +20,6 @@ register_nav_menus(array(
 
 // Add theme support for Post Thumbnails & Featured Images
 add_theme_support('post-thumbnails');
-    
+
+
 ?>

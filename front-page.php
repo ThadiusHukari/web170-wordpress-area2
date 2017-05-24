@@ -65,10 +65,6 @@
     <div class='embed-container'><iframe src='https://calendar.google.com/calendar/embed?mode=AGENDA&height=600&wkst=1&bgcolor=%23FFFFFF&src=gu6km764sg0vqr2ug43kkhuq5s%40group.calendar.google.com&color=%236B3304&ctz=America%2FLos_Angeles' style='border-width:0' frameborder='0' scrolling='no'></iframe>
     </div>
     
-    <h3>Recent Posts</h3>
-    <!-- SnapWidget Instagram Feed -->
-<script src="https://snapwidget.com/js/snapwidget.js"></script>
-<iframe src="https://snapwidget.com/embed/181116" class="snapwidget-widget" allowTransparency="true" frameborder="0" scrolling="no" style="border:none; overflow:hidden; width:100%; "></iframe>
     
 </aside>
 

@@ -1,10 +1,14 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title><?php bloginfo('description'); ?> | <?php bloginfo('name'); ?></title>
+<title><?php get_tads_title_tag(); ?></title>
     
+<!-- Start Meta -->    
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width" />
+<meta name="description" content="<?php echo strip_tags(get_the_excerpt()); ?>" />
+<!-- End Meta -->
+    
 <link rel="stylesheet" type="text/css" href="<?php bloginfo('stylesheet_url'); ?>" />
 <link rel="stylesheet" type="text/css" href="<?php bloginfo('template_directory'); ?>/flexslider.css" />
 
